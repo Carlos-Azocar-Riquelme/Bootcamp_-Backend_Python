@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Anuncios</title>
+        <style>
+            .alta {
+                color: red
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            {% for anuncio in anuncios %}
+            <li class="{{ anuncio['prioridad']}}">
+                <h2> {{anuncio['titulo']}}</h2>
+                <p> {{anuncio['contenido']}}</p>
+                <h3> {{anuncio['prioridad']}}</h3>
+            </li>
+            {% endfor %}
+    </body>
+</html>
+
+

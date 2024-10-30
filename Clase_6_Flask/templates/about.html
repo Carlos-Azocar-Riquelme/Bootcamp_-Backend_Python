@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Acerca de</title>
+    </head>
+    <body>
+        <h1>Hola, somos el {{grupo}} </h1>
+        <p>Estamos compuestos por:</p>
+        <p> Integrantes</p>
+        <ul> 
+        {% for integrante in integrantes %}
+            <li> {{integrante}}  </li>
+        {% endfor %}    
+        </ul>
+        <p><strong>Descripción: </strong>{{descripcion}}</p>
+        <p><strong>Fecha y hora: </strong>{{tiempo}}</p>
+
+    </body>
+</html>
+

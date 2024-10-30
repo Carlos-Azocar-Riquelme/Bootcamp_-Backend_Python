@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<title> Publicar anuncio </title>
+</head>
+<body>
+<h1>Publicar anuncio</h1>
+
+<form action="/anuncio" method="post">
+
+    <label for="titulo"> Titulo: </label>
+    <input type ="text" id="titulo" name="titulo" > <br>
+
+    <label for="contenido"> Contenido: </label>
+    <textarea id="contenido" name="contenido" ></textarea> <br>
+
+    <label for="Prioridad"> Prioridad: </label>
+    <select id="prioridad"   name ="prioridad">
+        <option value = "alta"> alta </option>
+        <option value = "media" selected> media </option>
+        <option value = "baja"> baja </option>
+    </select> <br>
+
+
+    <ul>
+{% for anuncio in anuncios %}
+<li class="{{ anuncio['prioridad']}}">
+
+    <h2> {{anuncio['titulo']}}</h2>
+    <h2> {{anuncio['contenido']}}</h2>
+    <h2> {{anuncio['prioridad']}}</h2>
+
+</li>
+{% endfor %}
+</ul>
+    <button type="submit"> publicar </button> 
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+</form>
+
+</body>
+
+</html>
+
+
+
