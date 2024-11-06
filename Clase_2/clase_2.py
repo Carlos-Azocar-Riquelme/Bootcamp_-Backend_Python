@@ -53,12 +53,12 @@
 # print(sum([1, 2, 3, 4, 5]))
 
 
-# Ejemplo:
-# Gestión de Inventario de ProductosConsidera un sistema de inventario simple para una tienda. 
-# Los productosestán organizados en una lista, y el sistema debe ser capaz de realizarvarias
-# operaciones para gestionar el inventario.1. Cree una lista inicial de productos fija.2. 
-# Solicita al usuario que agregue tres nuevos productos.3. Elimina un producto específico.4. 
-# Ordena la lista en orden alfabético.5. Muestra el primer y último producto en orden alfabético
+# # Ejemplo:
+# # Gestión de Inventario de ProductosConsidera un sistema de inventario simple para una tienda. 
+# # Los productosestán organizados en una lista, y el sistema debe ser capaz de realizar varias
+# # operaciones para gestionar el inventario.1. Cree una lista inicial de productos fija.2. 
+# # Solicita al usuario que agregue tres nuevos productos.3. Elimina un producto específico.4. 
+# # Ordena la lista en orden alfabético.5. Muestra el primer y último producto en orden alfabético
 
 # productos = ['manzana', 'pera', 'naranja', 'banana', 'uva']
 # i = 0
@@ -80,7 +80,7 @@
 # print(productos[0], " ", productos[len(productos)-1])
 
 
-# DICCIONARIOS
+# # DICCIONARIOS
 
 # diccionario = {
 #     'cursos': {
@@ -130,8 +130,15 @@ inventario = {
         "Nombre" : "Teléfono", 
         "Cantidad": 5, 
         "Precio": 1000
+    },
+    'codigo1040': {
+        "Nombre" : "Laptop", 
+        "Cantidad": 3, 
+        "Precio": 1500
     }
 }
+
+print(inventario)
 
 nombre = "Teléfono"
 Cantidad = 10
@@ -141,6 +148,7 @@ for codigo in inventario:
         inventario[codigo]["Cantidad"] = Cantidad
         
 
+print('Inventario actualizado')
 for codigo in inventario: 
     print(codigo)
     print(inventario[codigo])

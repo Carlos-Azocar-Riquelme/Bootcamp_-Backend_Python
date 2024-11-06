@@ -47,7 +47,7 @@ def anuncio():
     if request.method == 'POST':
         titulo = request.form.get('titulo', None)
         contenido = request.form['contenido']
-        prioridad = request.form['prioridad']´,
+        prioridad = request.form['prioridad'],
 
         if not titulo:
             flash("Favor ingrese el titulo")
